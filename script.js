@@ -103,9 +103,11 @@ function checkcollision(activepaddle) {
 function paddleHandler() {
     if (parseInt(computerscore.innerHTML) == 10) {
         alert("computer wins refresh the page to restart the game")
+        reset();
     }
     if (parseInt(userscore.innerHTML) == 10) {
-        alert("user wins refresh the page to restart the game")
+        alert("user wins refresh the page to restart the game");
+        reset();
     }
     if (ball.offsetLeft < 0) {
         computerscore.innerHTML = parseInt(computerscore.innerHTML) + 1;
