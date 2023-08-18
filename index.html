@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong 90s Game</title>
+</head>
+<style>
+    body{
+        background-color: green;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #gamebox{
+        position: absolute;
+        height: 70vh;
+        width: 70vw;
+        /* border: 2px solid red; */
+        background-color: black;
+        overflow: hidden;
+        top: 100px;
+        left: 175px;
+    }
+
+    #user-score , #computer-score{
+        position: absolute;
+        font-size: 25px;
+        color: white;
+        top: 12px;
+    }
+
+    #user-score{
+        left: 25%;
+    }
+
+    #computer-score{
+        right: 22%;
+    }
+    #dash-line{
+        border-left: 5px dashed green;
+        position: absolute;
+        top : 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+
+    #user-paddle{
+        position: absolute;
+        height: 100px;
+        width: 20px;
+        border-radius: 20px;
+        background-color: white;
+        border: 1px solid green;
+        left: 3px;
+        top: 150px;
+    }
+
+    #computer-paddle{
+        position: absolute;
+        height: 100px;
+        width: 20px;
+        border-radius: 20px;
+        background-color: red;
+        border: 1px solid green;
+        right: 3px;
+        top: 150px;
+    }
+
+    #ball{
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        background-color: violet;
+        border-radius: 50%;
+        top: 50%;
+        right: 50%;
+    }
+
+    #heading-title{
+        height: 70px;
+        width: 1500px;
+        /* border: 2px solid black; */
+        background-color: yellow;
+        margin: auto;
+        margin-top: 5px;
+    }
+
+    #text{
+        font-size: 50px;
+        text-align: center;
+        font-weight: 300;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: darkred;
+    }
+
+</style>
+<body>
+    <div id="heading-title">
+        <h1 id="text">Vintage Ping Pong Game</h1>
+
+    </div>
+    <div id="gamebox">
+        <div class="scorboard">
+            <div id="user-score">0</div>
+            <!-- <h1>computer score</h1> -->
+            <div id="computer-score">0</div>
+        </div>
+
+        <div id="dash-line"></div>
+        <div id="user-paddle"></div>
+        <div id="computer-paddle"></div>
+        <div id="ball"></div>
+    </div>
+
+    <!-- js -->
+    <script src="script.js"></script>
+
+    <!-- Note : it is not posible to defeat the computer but if we change the logic a bit we can defeate it -->
+</body>
+</html>
